@@ -20,6 +20,7 @@ header {
 
 nav {
   display: flex;
+  justify-content: right;
   background-color: #d8a47f;
 }
 
@@ -42,6 +43,7 @@ footer {
   display: flex;
   width: 90%;
   margin: 1% auto;
+  align-items: flex-start;
 }
 
 .product button {
@@ -50,6 +52,7 @@ footer {
 
 .product-slideshow {
   display: flex;
+  align-items: center;
 }
 
 .product-image {
@@ -71,7 +74,7 @@ footer {
   .product-slideshow button {
     /* Removes the slideshow buttons from the document flow */
     display: none;
-  }
+  } 
 
   .product-details {
     margin-left: 0;
