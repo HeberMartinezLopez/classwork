@@ -60,8 +60,16 @@ article p {
 }
 
 /* TODO: Style the term/phrase - underline, black text, grab cursor */
+article div p::before {
+  content: 'Cascading Style Sheets';
+  text-decoration: underline;
 
+}
 /* TODO: Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
+article div p :hover {
+  display:
+
+}
 
 aside {
   width: 25%;
