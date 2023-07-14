@@ -23,6 +23,7 @@ var handleFormSubmit = function (event) {
 
   printSkills(nameInput, dateInput);
 
+  // resets form
   nameInputEl.val('');
   dateInputEl.val('');
 };
@@ -63,12 +64,3 @@ $(function () {
     changeYear: true,
   });
 });
-
-// Add interaction here
-//
-$( function() {
-  $( "#skills-list" ).sortable({
-    placeholder: "ui-state-highlight"
-  });
-  $( "#skills-list" ).disableSelection();
-} );
