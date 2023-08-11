@@ -55,7 +55,9 @@ var getUserRepos = function (user) {
 
 var getFeaturedRepos = function (language) {
   // What are the query parameters doing here?
-  // TODO: Write your answer here
+  // TODO: Write your answer here 
+  // q=== the search term, ${lang}+is:featured
+  // sort === sorted by the number of help wanted issues 
   var apiUrl = 'https://api.github.com/search/repositories?q=' + language + '+is:featured&sort=help-wanted-issues';
 
   fetch(apiUrl).then(function (response) {
@@ -74,6 +76,7 @@ var displayRepos = function (repos, searchTerm) {
     repoContainerEl.textContent = 'No repositories found.';
     // What would happen if there was no `return;` here?
     // TODO: Write your answer here
+    // then the search term would appear and list would be empty
     return;
   }
 
