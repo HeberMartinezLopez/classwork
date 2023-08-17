@@ -1,6 +1,7 @@
 const http = require('http');
 
 // TODO: What does this function return?
+// checks to make sure that we do not get a return code of 200
 const asyncRequest = (url) =>
   new Promise((resolve, reject) => {
     let error;
@@ -30,9 +31,11 @@ const asyncRequest = (url) =>
         // response status code was 200.
         if (error) {
           // TODO: What the following line do?
+          // it rejects our error out 
           reject(error);
         } else {
           // TODO: What does the following line do?
+          // it will log out compiled raw data
           resolve(rawData);
         }
       });

@@ -1,5 +1,6 @@
 const { readFile, writeFile } = require('fs/promises');
 const BlogPost = require('./lib/blogPost');
+const { error } = require('console');
 
 // TODO: Update the code below so that the exception is caught and a message is logged in the terminal.
 
@@ -15,7 +16,9 @@ readFile('./data/post.json', 'utf-8')
     );
     const html = post.render();
     return writeFile('./dist/post.html', html);
-  })
-  .then(() => {
+  }).then(() => {
     console.log('Created post.html');
+  }).catch((err) => {
+    console.error(err);
+    console.log(`Unable to read post data.`);
   });
