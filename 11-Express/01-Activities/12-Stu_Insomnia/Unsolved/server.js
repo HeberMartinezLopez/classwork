@@ -1,7 +1,10 @@
 const express = require('express');
 // TODO: Require the json file located in `/db`
+const jsonData = require('./db/repos.json')
+const PORT = 3001;
 
 // TODO: Create an `app` variable set to the value of `express()`
+const app = express();
 
 app.get('/', (req, res) => {
   res.send(
@@ -10,5 +13,8 @@ app.get('/', (req, res) => {
 });
 
 // TODO: Create a GET route for `/api` that will return the content of our json file
-
+app.get('/api', (req,res) => res.json(jsonData));
 // TODO: Have the app listen on port 3001
+app.listen(PORT, ()=>
+console.log(`Listening at https://localhost:${PORT}`)
+)
