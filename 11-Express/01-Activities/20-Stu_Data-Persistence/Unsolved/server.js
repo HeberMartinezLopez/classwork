@@ -36,6 +36,7 @@ app.post('/api/reviews', (req, res) => {
 
   // If all the required properties are present
   if (product && review && username) {
+    fs.readFile
     // Variable for the object we will save
     const newReview = {
       product,
