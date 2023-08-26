@@ -23,7 +23,7 @@ const db = mysql.createConnection(
 );
 
 // Query database
-db.query('SELECT * FROM students', (err, results) => {
+db.query('SELECT * FROM students', (__err, results) => {
   console.log(results);
 });
 
