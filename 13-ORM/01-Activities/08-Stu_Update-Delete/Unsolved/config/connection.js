@@ -19,3 +19,9 @@ if (process.env.JAWSDB_URL) {
 }
 
 module.exports = sequelize;
+
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/socialmedia');
+
+module.exports = mongoose.connection;
