@@ -13,7 +13,7 @@ const Profile = () => {
     // Important for Query Variables: The useQuery hook is able to take a second argument which is where we will pass the query arguments needed to complete the request for a specific profile
     // The second argument is passed as an object with a variables property
     // The variables object will receive each key matching the query definition in utils/queries.js, and the value we'd like to deliver to the server
-    variables: { profileId },
+    variables: { profileId: profileId },
   });
 
   const profile = data?.profile || {};

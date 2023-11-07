@@ -9,7 +9,7 @@ const resolvers = {
     // Important for Query Variables: Each query resolver function can accept up to four parameters.
     // The second parameter, commonly referred to as "args," represents the variable argument values passed with the query.
     // It is always an object, and in this case, we are destructuring that object to retrieve the profileId value.
-    profile: async (_parent, { profileId }) => {
+    profile: async (parent, { profileId }) => {
       return Profile.findOne({ _id: profileId });
     },
   },
